@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <div class="login">
+        <form class="login-form" id="loginForm" onsubmit="authenticateUser(event)">
+            <h1> Welcome to easyVote</h1>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <div class="error"></div>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <div class="error"></div>
+            <button type="submit">Login</button>
+            <div class="signup-link">
+                Don't have an account? <a href="#" onclick="openSignupForm()">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <div class="sign">
+        <form class="sign-form" id="signupForm" style="display: none;">
+            <h1> Register as Voter</h1>
+            <div class="cont">
+                <input type="text" id="fname" placeholder="First Name">
+                <input type="text" id="lname" placeholder="Last Name">
+                <input type="text" id="voterId" placeholder="VoterID" >
+                <input type="text" id="citiNum" placeholder="Citizenship Number">
+                <input type="text" id="phnum" placeholder="Phone Number">
+                <input type="password" id="password" placeholder="Password" >
+                <input type="password" id="repassword" placeholder="Re-Enter Password" >
+            </div>   
+            <div class="last">  
+                <input type="submit" class="msignup" value="Register">
+                <div class="last1">
+                    <a href="#" onclick="backButton()">back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
